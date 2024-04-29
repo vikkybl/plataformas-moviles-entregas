@@ -4,21 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indice</title>
+
+<style>
+    :root{
+        --fondo: rgb(158, 137, 108);
+        --color: #8379;
+    }
+    body{
+        background-color: var(--fondo);
+        color: #fff;
+    }
+    a{
+        text-decoration: none;
+        color:#fff;
+    }
+    header:hover{
+        color: var(--color);
+    }
+    .contenedor{
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /*Centra verticalmente*/
+        height: 55vh; /*Altura total de la ventana*/
+    }
+    .trabajos{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        grid-template-rows: auto auto auto; /* Tres filas de altura automática */
+        grid-gap: 20px; /* Espacio entre las filas y las columnas */
+    }
+
+    .recuadro{
+        border: 2px solid var(--color); /* Tamaño y estilo del borde */
+        border-radius: 30px;
+        padding: 10px; /* Espacio dentro del recuadro */
+        width: 200px; /* Ancho del recuadro */
+        height: 30px; /* Altura del recuadro */
+        text-align: center;
+        align-items: center;
+    }
+
+    .recuadro:hover{
+        background-color: var(--color);
+    }
+
+     /* #tp1, #tp2, #tp3, #pt4{
+    
+    }  */
+
+</style>
+
 </head>
 <body>
+<header>
     <center>
         <h1>Alumna: Blanco Victoria 
         <br>
         Curso: 7°3°</h1>
     </center>
+</header>
+<div class="contenedor">
+<div class="trabajos">
 
-    <a href="tp-1">Trabajo Practico 1: html</a>
-    <br>
-    <a href="tp-2/index.html">Trabajo Practico 2: css</a>
-    <br>
-    <a href="tp-3/index.html">Trabajo Practico 3: especifidad</a>
-    <br>
-    <a href="tp-4/index.html">Trabajo Practico 4: Media Queries</a>
+    <div class="recuadro">
+        <a href="tp-1" id="tp1">Trabajo Practico 1: html</a>
+    </div>
+
+    <div class="recuadro">
+        <a href="tp-2/index.html"  id="tp2">Trabajo Practico 2: css</a>
+    </div>
+
+    <div class="recuadro">
+        <a href="tp-3/index.html"  id="tp3">Trabajo Practico 3: especifidad</a>
+    </div>
+
+    <div class="recuadro">
+        <a href="tp-4/index.html"  id="tp4">Trabajo Practico 4: Media Queries</a>
+    </div>
+
+    <div class="recuadro">
+        <a href="tp-5/#"  id="tp5">Trabajo Practico 5: Boostrap</a>
+    </div>
+    
+    <div class="recuadro">
+        <a href="tp-6/#"  id="tp6">Trabajo Practico 6: Boostrap.02</a>
+    </div>
+
+</div>
+</div>
 
 </body>
 </html>
