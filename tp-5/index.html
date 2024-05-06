@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo Practico N°5</title>
+    <style>
+        :root{
+            --fondo: rgb(158, 137, 108);
+            --color: #8379;
+        }
+        body{
+            background-color: var(--fondo);
+            color: #fff;
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+        header:hover{
+            color: var(--color);
+        }
+        .contenedor{
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /*Centra verticalmente*/
+            height: 55vh; /*Altura total de la ventana*/
+        }
+        .trabajos{
+            display: grid;
+            grid-gap: 20px;  /* Espacio entre las filas y las columnas */
+        }
+    
+        button{
+            border: 2px solid var(--fondo); /* Tamaño y estilo del borde */
+            border-radius: 30px;
+            padding: 10px; /* Espacio dentro del recuadro */
+            width: 200px; /* Ancho del recuadro */
+            height: 30px; /* Altura del recuadro */
+            text-align: center;
+            align-items: center;
+            
+        }
+    
+        button:hover{
+            background-color: var(--color);
+        }    
+    </style>
 </head>
 <body>
-    <a href="layout-1.html">Layout 1</a>
-    <br>
-    <a href="layout-2.html">Layout 2</a>
-    <br>
-    <a href="layout-3.html">Layout 3</a>
+<div class="contenedor">
+<div class="trabajos">
+
+    <div class="button">
+        <a href="layout-1.html" id="l1"> <button> Layout 1 </button> </a>
+    </div>
+
+    <div class="button">
+        <a href="layout-2.html" id="l2"><button> Layout 2 </button></a>
+    </div>
+
+    <div class="button">
+        <a href="layout-3.html" id="l3"><button> Layout 3 </button></a>
+    </div>
+
+</div>
+</div>
+
 </body>
 </html>
