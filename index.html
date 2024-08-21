@@ -7,8 +7,9 @@
 
 <style>
     :root{
-        --fondo: rgb(158, 137, 108);
-        --color: #8379;
+        --fondo: #AF8F6F;
+        --color: #74512D;
+        --titulo: #E2DFD0;
     }
     body{
         background-color: var(--fondo);
@@ -19,7 +20,7 @@
         color:#fff;
     }
     header:hover{
-        color: var(--color);
+        color: var(--titulo);
     }
     .contenedor{
         display: flex;
@@ -29,7 +30,7 @@
     }
     .trabajos{
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        grid-template-columns: repeat(3, 1fr); /* Dos columnas */
         grid-template-rows: auto auto auto; /* Tres filas de altura automática */
         grid-gap: 20px; /* Espacio entre las filas y las columnas */
     }
