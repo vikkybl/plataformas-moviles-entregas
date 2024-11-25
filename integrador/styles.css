@@ -27,13 +27,6 @@ header {
     align-items: center;
 }
 
-/* Estilos comunes para la navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
     font-size: 24px;
     color: #fff;
@@ -76,7 +69,7 @@ header {
 
 .hero {
     height: 100vh;
-    background-image: url('background-image.jpg'); /* Aquí deberías colocar la imagen de fondo que quieres usar */
+    background-image: url('background-image.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -126,54 +119,196 @@ footer p {
     animation: fadeIn 1s ease-out;
 }
 
+.tirada-amorosa {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr); /* Dos columnas */
+    grid-template-areas:
+        "carta1 carta2"  /* Fila superior */
+        "carta4 carta3"  /* Fila media */
+        ". carta5";      /* Fila inferior con carta 5 en el centro */
+    gap: 10px; /* Espacio entre cartas */
+}
+
+.tirada-amorosa .card:nth-child(1) {
+    grid-area: carta1;
+}
+
+.tirada-amorosa .card:nth-child(2) {
+    grid-area: carta2;
+}
+
+.tirada-amorosa .card:nth-child(3) {
+    grid-area: carta3;
+}
+
+.tirada-amorosa .card:nth-child(4) {
+    grid-area: carta4;
+}
+
+.tirada-amorosa .card:nth-child(5) {
+    grid-area: carta5; /* Asegúrate de que esté correctamente asignada */
+    justify-self: center; /* Asegura que la carta 5 esté centrada en su celda */
+    grid-column: 1 / span 2; /* Ocupa ambas columnas para centrarla */
+}
+
+.tirada-nuevo-proyecto {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); /* Tres columnas */
+    grid-template-areas:
+        "carta1 carta2 carta3"  /* Fila superior */
+        "carta4 carta5 ."        /* Fila media */
+        ". . carta6";           /* Fila inferior */
+    gap: 10px; /* Espacio entre cartas */
+}
+
+.tirada-nuevo-proyecto .card:nth-child(1) {
+    grid-area: carta1;
+}
+
+.tirada-nuevo-proyecto .card:nth-child(2) {
+    grid-area: carta2;
+}
+
+.tirada-nuevo-proyecto .card:nth-child(3) {
+    grid-area: carta3;
+}
+
+.tirada-nuevo-proyecto .card:nth-child(4) {
+    grid-area: carta4;
+    justify-self: center;
+    grid-column: 1/ span 2;
+}
+
+.tirada-nuevo-proyecto .card:nth-child(5) {
+    grid-area: carta5;
+    justify-self: center;
+    grid-column: 2/ span 2;
+}
+
+.tirada-nuevo-proyecto .card:nth-child(6) {
+    grid-area: carta6; /* Asegúrate de que esté correctamente asignada */
+    justify-self: center; /* Asegura que la carta 6 esté centrada en su celda */
+    grid-column: 1 / span 3; /* Ocupa ambas columnas para centrarla */
+}
+
+.tirada-vidas-pasadas {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr); /* Tres columnas */
+    grid-template-areas:
+        ". carta1 ."      /* Fila superior */
+        "carta2 carta3 carta4"  /* Fila media */
+        ". carta5 carta6"
+        ". carta7."; /* Fila inferior */
+    gap: 10px; /* Espacio entre cartas */
+}
+
+.tirada-vidas-pasadas .card:nth-child(1) {
+    grid-area: carta1;
+    justify-self: center; /* Asegura que la carta 1 esté centrada en su celda */
+    grid-column: 1/ span 3;
+}
+
+.tirada-vidas-pasadas .card:nth-child(2) {
+    grid-area: carta2;
+    grid-column: 1;
+}
+
+.tirada-vidas-pasadas .card:nth-child(3) {
+    grid-area: carta3;
+}
+
+.tirada-vidas-pasadas .card:nth-child(4) {
+    grid-area: carta4;
+}
+
+.tirada-vidas-pasadas .card:nth-child(5) {
+    grid-area: carta5; /* Asegúrate de que esté correctamente asignada */
+    justify-self: center; /* Asegura que la carta 5 esté centrada en su celda */
+    grid-column: 1/ span 2;
+}
+
+.tirada-vidas-pasadas .card:nth-child(6) {
+    grid-area: carta6; /* Asegúrate de que esté correctamente asignada */
+    justify-self: center; /* Asegura que la carta 6 esté centrada en su celda */
+    grid-column: 2/ span 2 ;
+}
+
+.tirada-vidas-pasadas .card:nth-child(7) {
+    grid-area: carta7; /* Asegúrate de que esté correctamente asignada */
+    justify-self: center; /* Asegura que la carta 6 esté centrada en su celda */
+    grid-column: 1/ span 3 ;
+}
+
+.tirada-karma {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); /* Tres columnas */
+    grid-template-areas:
+        ". carta1 ."    /* Fila superior */
+        ". carta2 ."    /* Segunda fila */
+        "carta3 carta4 carta5"  /* Fila media */
+        ". carta6 carta7"   /* Cuarta fila */
+        ". carta8 .";  /* Fila inferior */
+    gap: 10px; /* Espacio entre cartas */
+}
+
+.tirada-karma .card:nth-child(1) {
+    grid-area: carta1; /* Carta 1 en el centro superior */
+    justify-self: center; /* Centra la carta en su celda */
+}
+
+.tirada-karma .card:nth-child(2) {
+    grid-area: carta2; /* Carta 2 en el centro */
+    justify-self: center; /* Centra la carta en su celda */
+}
+
+.tirada-karma .card:nth-child(3) {
+    grid-area: carta3; /* Carta 3 en la fila media izquierda */
+}
+
+.tirada-karma .card:nth-child(4) {
+    grid-area: carta4; /* Carta 4 en la fila media central */
+}
+
+.tirada-karma .card:nth-child(5) {
+    grid-area: carta5; /* Carta 5 en la fila media derecha */
+
+}
+
+.tirada-karma .card:nth-child(6) {
+    grid-area: carta6; /* Carta 6 en la fila inferior izquierda */
+    justify-self: center; /* Asegura que la carta 6 esté centrada en su celda */
+    grid-column: 1/ span 2 ;
+}
+
+.tirada-karma .card:nth-child(7) {
+    grid-area: carta7; /* Carta 7 en la fila inferior derecha */
+    justify-self: center; /* Centra la carta en su celda */
+    grid-column: 2/ span 2 ;
+}
+
+.tirada-karma .card:nth-child(8) {
+    grid-area: carta8; /* Carta 8 en la fila inferior central */
+    justify-self: center; /* Centra la carta en su celda */
+}
+
+
 .card {
     background-color: #333;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     color: white;
-    width: 220px;
-    max-width: 100%;
+    width: 170px;
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn 0.5s forwards;
     margin-bottom: 30px;
-    padding-bottom: 60px;
 }
 
 .card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.card-info {
-    text-align: center;
-}
-
-.card-info h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.card-info p {
-    font-size: 14px;
-}
-
-input[type="number"] {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #650db8;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-input[type="number"]::placeholder {
-    color: #aaa;
 }
 
 @keyframes slideIn {
@@ -196,75 +331,28 @@ input[type="number"]::placeholder {
     }
 }
 
+/* Estilo responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-    }
-
-    .nav-links a {
-        margin-right: 10px;
-        font-size: 14px;
-    }
-
-    .cta-button {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 20px;
-    }
-
-    .tarot-cards {
-        gap: 15px;
-    }
-
     .card {
-        width: 180px;
-        padding: 15px;
-        margin-bottom: 20px;
+        width: 120px; /* Reduce el tamaño de las cartas */
     }
-
-    .card-info h2 {
-        font-size: 16px;
-    }
-
-    .card-info p {
-        font-size: 12px;
-    }
-
-    input[type="number"] {
-        max-width: 100%;
-        margin-bottom: 15px;
+    .cards-container {
+        gap: 10px; /* Menor espacio entre cartas */
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #1a1a1a;
-        z-index: 1000;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .card {
+        width: 100px; /* Tamaño más pequeño para móviles muy compactos */
     }
+    .cards-container {
+        gap: 8px;
+    }
+}
 
-    .navbar {
+@media (max-width: 480px) {
+    .header, .navbar {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -272,7 +360,6 @@ input[type="number"]::placeholder {
 
     .logo {
         margin-bottom: 10px;
-        font-size: 20px;
     }
 
     .nav-links {
@@ -282,40 +369,14 @@ input[type="number"]::placeholder {
         gap: 10px;
     }
 
-    .nav-links a {
-        margin-right: 0;
-        font-size: 14px;
-    }
-
-    .cta-button {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .card {
-        width: 150px;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    .card-info h2 {
-        font-size: 14px;
-    }
-
-    .card-info p {
-        font-size: 10px;
-    }
-
-    input[type="number"] {
-        max-width: 100%;
-        margin-bottom: 10px;
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        z-index: 1000;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 }
